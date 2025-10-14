@@ -1,0 +1,118 @@
+.country-flag {
+    margin-bottom: 24px;
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.02);
+    overflow: hidden;
+    position: relative;
+}
+
+.country-flag::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.country-flag:hover {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
+    border-color: rgba(102, 126, 234, 0.5);
+}
+
+.country-flag:hover::after {
+    opacity: 1;
+}
+
+.fake-heading {
+    margin-top: 30px;
+}
+
+@media (min-width: 992px) {
+    .fake-heading {
+        margin-top: 42px;
+    }
+}
+
+/* Table row animations */
+.table tbody tr {
+    animation: fadeIn 0.5s ease-out backwards;
+}
+
+.table tbody tr:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.table tbody tr:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.table tbody tr:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.table tbody tr:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.table tbody tr:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+/* Mobile адаптация */
+@media (max-width: 767px) {
+    .fake-heading {
+        margin-top: 20px;
+    }
+
+    .country-flag {
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb {
+        padding: 10px 16px;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb>li+li:before {
+        padding: 0 8px;
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .table {
+        font-size: 13px;
+    }
+
+    .table>thead>tr>th,
+    .table>tbody>tr>th,
+    .table>thead>tr>td,
+    .table>tbody>tr>td {
+        padding: 8px;
+    }
+
+    .table>thead>tr>th {
+        font-size: 11px;
+    }
+
+    /* Делаем колонки вертикальными на мобильных */
+    .col-md-4 {
+        width: 100%;
+        float: none;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

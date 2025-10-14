@@ -1,0 +1,73 @@
+.country-search-form {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.country-search-form::before {
+    content: '🔍';
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#search-box {
+    max-width: 700px;
+    font-size: 18px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    padding: 16px 32px 16px 60px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #e8eaed;
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+}
+
+#search-box:focus {
+    border-color: rgba(102, 126, 234, 0.6);
+    box-shadow: 0 8px 40px rgba(102, 126, 234, 0.3), 0 0 0 4px rgba(102, 126, 234, 0.1);
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#search-box::placeholder {
+    color: rgba(232, 234, 237, 0.4);
+    font-weight: 500;
+}
+
+/* Search page title animation */
+.country-search-form h1 {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Mobile адаптация */
+@media (max-width: 767px) {
+    .country-search-form {
+        margin-bottom: 30px;
+    }
+
+    .country-search-form::before {
+        left: 16px;
+        font-size: 18px;
+    }
+
+    #search-box {
+        max-width: 100%;
+        font-size: 16px;
+        height: 50px;
+        padding: 12px 24px 12px 50px;
+        border-radius: 25px;
+    }
+
+    .country-search-form h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+}

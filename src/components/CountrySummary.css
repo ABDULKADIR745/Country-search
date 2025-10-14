@@ -1,0 +1,102 @@
+.panel.clickable {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.panel.clickable::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.15), transparent);
+    transition: left 0.6s ease;
+}
+
+.panel.clickable:hover::before {
+    left: 100%;
+}
+
+.panel.clickable:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
+    border-color: rgba(102, 126, 234, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.panel-heading .pull-right {
+    margin-left: 10px;
+}
+
+.panel-title {
+    font-weight: 500;
+}
+
+.panel-title small {
+    display: block;
+    margin-top: 5px;
+    color: #777;
+}
+
+.panel .table {
+    font-size: 13px;
+}
+
+.panel .table th {
+    width: 60%;
+    font-weight: 700;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+    color: #8b9bff;
+    letter-spacing: 0.03em;
+}
+
+/* Убедимся, что заголовки панелей всегда видны */
+.panel-heading .panel-title {
+    color: #fff !important;
+    background: none !important;
+    -webkit-text-fill-color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.panel-heading .panel-title small {
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.panel .table td {
+    width: 40%;
+}
+
+/* Mobile адаптация */
+@media (max-width: 767px) {
+    .panel.clickable {
+        margin-bottom: 20px;
+    }
+
+    .panel-heading {
+        padding: 15px 18px;
+    }
+
+    .panel-title {
+        font-size: 16px;
+    }
+
+    .panel .table {
+        font-size: 12px;
+    }
+
+    .panel .table th,
+    .panel .table td {
+        padding: 8px;
+    }
+
+    .panel-heading .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}

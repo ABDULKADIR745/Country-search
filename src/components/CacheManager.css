@@ -1,0 +1,93 @@
+.cache-manager {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.cache-manager h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.cache-info {
+    margin-bottom: 20px;
+}
+
+.cache-info p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.cache-info strong {
+    color: #8b9bff;
+    margin-right: 8px;
+}
+
+.cache-clear-btn {
+    width: 100%;
+    max-width: 300px;
+}
+
+.cache-notification {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, rgba(72, 219, 251, 0.2) 0%, rgba(92, 225, 230, 0.2) 100%);
+    border: 1px solid rgba(72, 219, 251, 0.5);
+    border-radius: 12px;
+    color: #48dbfb;
+    font-weight: 600;
+    text-align: center;
+    animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Светлая тема */
+.light-theme .cache-manager {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(203, 213, 225, 0.6);
+}
+
+.light-theme .cache-info strong {
+    color: #667eea;
+}
+
+.light-theme .cache-notification {
+    background: linear-gradient(135deg, rgba(72, 219, 251, 0.15) 0%, rgba(92, 225, 230, 0.15) 100%);
+    border: 1px solid rgba(72, 219, 251, 0.4);
+    color: #0891b2;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .cache-manager {
+        padding: 16px;
+        margin-top: 25px;
+    }
+
+    .cache-manager h3 {
+        font-size: 18px;
+    }
+
+    .cache-info p {
+        font-size: 14px;
+    }
+
+    .cache-clear-btn {
+        max-width: 100%;
+    }
+}

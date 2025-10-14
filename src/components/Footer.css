@@ -1,0 +1,38 @@
+footer {
+    margin-top: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-image: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    color: rgba(197, 199, 202, 0.9);
+    font-weight: 500;
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #667eea 50%, transparent 100%);
+    transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+    footer {
+        margin-top: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 13px;
+    }
+
+    footer small {
+        font-size: 12px;
+    }
+}
