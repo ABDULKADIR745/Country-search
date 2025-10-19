@@ -30,7 +30,7 @@ const CountryIndex = () => {
             <div className="row">
                 <div className="col-md-12">
                     <h1>Поиск страны</h1>
-                    <form role="form" className="country-search-form">
+                    <form role="form" className="country-search-form" onSubmit={(e) => e.preventDefault()}>
                         <input
                             type="text"
                             className="form-control"
