@@ -11,7 +11,6 @@
     padding-bottom: 60px;
 }
 
-/* Animated background particles */
 .app::after {
     content: '';
     position: fixed;
@@ -42,7 +41,6 @@
     }
 }
 
-/* Mobile адаптация */
 @media (max-width: 768px) {
     .app>.container {
         padding-top: 20px;

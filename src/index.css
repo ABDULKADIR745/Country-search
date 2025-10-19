@@ -152,7 +152,6 @@ a:hover::after {
     width: 100%;
 }
 
-/* Container */
 .container {
     padding-right: 15px;
     padding-left: 15px;
@@ -180,7 +179,6 @@ a:hover::after {
     }
 }
 
-/* Row and columns - темная тема по умолчанию */
 .row {
     margin-right: -15px;
     margin-left: -15px;
@@ -199,7 +197,6 @@ a:hover::after {
     clear: both;
 }
 
-/* Светлый текст для темной row */
 .row,
 .row p,
 .row span,
@@ -234,7 +231,6 @@ a:hover::after {
     display: none;
 }
 
-/* Панели внутри row - темная тема */
 .row .panel {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(102, 126, 234, 0.2);
@@ -248,7 +244,6 @@ a:hover::after {
     box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
 }
 
-/* Таблицы внутри row - темная тема */
 .row .table>thead>tr>th,
 .row .table>tbody>tr>th,
 .row .table>thead>tr>td,
@@ -292,7 +287,6 @@ a:hover::after {
     color: #b4c5ff !important;
 }
 
-/* Формы внутри row - темная тема */
 .row .form-control,
 .row #search-box {
     background: rgba(255, 255, 255, 0.08) !important;
@@ -314,7 +308,6 @@ a:hover::after {
     font-weight: 400;
 }
 
-/* Кнопки внутри row - темная тема */
 .row .btn {
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.6) 0%, rgba(118, 75, 162, 0.6) 100%) !important;
     border-color: rgba(102, 126, 234, 0.8) !important;
@@ -328,7 +321,6 @@ a:hover::after {
     transform: translateY(-2px) !important;
 }
 
-/* Дополнительные элементы внутри row - темная тема */
 .row i,
 .row em {
     color: #c5c7ca !important;
@@ -343,24 +335,20 @@ a:hover::after {
     color: #a0a5ab !important;
 }
 
-/* Иконка поиска внутри row */
 .row .country-search-form::before {
     opacity: 0.5;
     filter: none;
 }
 
-/* Loading текст внутри row */
 .row .loading-text {
     color: #8b9bff !important;
 }
 
-/* Списки внутри row */
 .row ul,
 .row ol {
     color: #e8eaed;
 }
 
-/* Карточки стран - темная тема */
 .row .panel.clickable {
     background: rgba(255, 255, 255, 0.06);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
@@ -407,7 +395,6 @@ a:hover::after {
     }
 }
 
-/* Table */
 .table {
     width: 100%;
     max-width: 100%;
@@ -474,7 +461,6 @@ a:hover::after {
     }
 }
 
-/* Дополнительные стили для темной темы */
 p,
 li,
 span {
@@ -491,7 +477,6 @@ em {
     color: #c5c7ca;
 }
 
-/* Form controls */
 .form-control {
     display: block;
     width: 100%;
@@ -521,7 +506,6 @@ em {
     color: rgba(232, 234, 237, 0.4);
 }
 
-/* Panel */
 .panel {
     margin-bottom: 24px;
     background: rgba(255, 255, 255, 0.03);
@@ -601,7 +585,6 @@ em {
     margin-bottom: 0;
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -655,7 +638,6 @@ em {
     box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
 }
 
-/* Utilities */
 .pull-right {
     float: right !important;
 }
@@ -678,7 +660,6 @@ em {
     content: ", ";
 }
 
-/* Loading Animation */
 @keyframes pulse {
 
     0%,
@@ -708,7 +689,6 @@ em {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Smooth scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
@@ -729,7 +709,6 @@ em {
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
 }
 
-/* Selection styles */
 ::selection {
     background: rgba(102, 126, 234, 0.4);
     color: #ffffff;
@@ -740,7 +719,6 @@ em {
     color: #ffffff;
 }
 
-/* Breadcrumb */
 .breadcrumb {
     padding: 14px 24px;
     margin-bottom: 24px;
@@ -772,7 +750,6 @@ em {
     font-weight: 600;
 }
 
-/* Clickable table rows */
 .table>tbody>tr.clickable {
     transition: all 0.3s ease;
     cursor: pointer;
@@ -783,7 +760,6 @@ em {
     transform: scale(1.01);
 }
 
-/* Responsive improvements */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -858,7 +834,6 @@ em {
     }
 }
 
-/* Очень маленькие экраны */
 @media (max-width: 480px) {
     body {
         font-size: 13px;
@@ -907,13 +882,11 @@ em {
     }
 }
 
-/* Focus visible for accessibility */
 *:focus-visible {
     outline: 3px solid rgba(102, 126, 234, 0.5);
     outline-offset: 2px;
 }
 
-/* Reduced motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
 
     *,
@@ -925,7 +898,6 @@ em {
     }
 }
 
-/* Fade-in animation for page load */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -942,7 +914,6 @@ em {
     animation: fadeIn 0.6s ease-out;
 }
 
-/* Hover glow effect */
 @keyframes glow {
 
     0%,
@@ -955,7 +926,6 @@ em {
     }
 }
 
-/* Beautiful gradient text effect */
 .gradient-text {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     -webkit-background-clip: text;
@@ -965,7 +935,6 @@ em {
     animation: gradientShift 3s ease infinite;
 }
 
-/* Card entrance animation */
 @keyframes slideUp {
     from {
         opacity: 0;
@@ -1014,12 +983,10 @@ em {
     animation-delay: 0.4s;
 }
 
-/* Убираем анимацию появления для панелей внутри row */
 .row .panel {
     animation: none !important;
 }
 
-/* Обеспечиваем правильную работу hover для карточек */
 .row .panel.clickable {
     will-change: transform, box-shadow;
     backface-visibility: hidden;
@@ -1028,12 +995,10 @@ em {
     -webkit-transform: translateZ(0);
 }
 
-/* Убираем анимации для строк таблиц внутри row */
 .row .table tbody tr {
     animation: none !important;
 }
 
-/* Оптимизация производительности для row */
 .row {
     contain: layout style;
 }

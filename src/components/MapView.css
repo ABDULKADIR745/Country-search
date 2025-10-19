@@ -20,7 +20,6 @@
     height: 100%;
 }
 
-/* Mobile адаптация */
 @media (max-width: 767px) {
     .map-view-container {
         margin-top: 20px;

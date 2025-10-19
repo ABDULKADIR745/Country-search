@@ -55,7 +55,6 @@
     letter-spacing: 0.03em;
 }
 
-/* Убедимся, что заголовки панелей всегда видны */
 .panel-heading .panel-title {
     color: #fff !important;
     background: none !important;
@@ -72,7 +71,6 @@
     width: 40%;
 }
 
-/* Mobile адаптация */
 @media (max-width: 767px) {
     .panel.clickable {
         margin-bottom: 20px;

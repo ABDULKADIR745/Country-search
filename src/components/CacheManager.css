@@ -56,7 +56,6 @@
     }
 }
 
-/* Светлая тема */
 .light-theme .cache-manager {
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(203, 213, 225, 0.6);
@@ -72,7 +71,6 @@
     color: #0891b2;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .cache-manager {
         padding: 16px;

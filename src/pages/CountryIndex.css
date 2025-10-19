@@ -42,12 +42,10 @@
     font-weight: 500;
 }
 
-/* Search page title animation */
 .country-search-form h1 {
     animation: fadeIn 0.8s ease-out;
 }
 
-/* Mobile адаптация */
 @media (max-width: 767px) {
     .country-search-form {
         margin-bottom: 30px;

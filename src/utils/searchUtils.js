@@ -1,6 +1,3 @@
-/**
- * Filter countries based on search term
- */
 export const filterCountries = (countries, searchTerm) => {
     if (!searchTerm || searchTerm.trim() === '') {
         return countries

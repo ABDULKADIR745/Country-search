@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import './MapView.css'
 
-// Component to fit bounds when geoData changes
 const FitBounds = ({ geoData }) => {
     const map = useMap()
 

@@ -12,7 +12,6 @@ const CacheManager = () => {
 
     useEffect(() => {
         updateCacheInfo()
-        // Обновляем информацию каждые 5 секунд
         const interval = setInterval(updateCacheInfo, 5000)
         return () => clearInterval(interval)
     }, [])

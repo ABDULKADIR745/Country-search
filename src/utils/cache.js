@@ -1,20 +1,9 @@
-/**
- * Простая система кэширования с поддержкой localStorage
- */
 
-// Кэш в памяти для быстрого доступа
 const memoryCache = new Map()
 
-// Время жизни кэша (30 минут)
 const CACHE_DURATION = 30 * 60 * 1000
 
-/**
- * Получить данные из кэша
- * @param {string} key - Ключ кэша
- * @returns {any|null} - Закэшированные данные или null
- */
 export const getFromCache = (key) => {
-    // Проверяем память
     if (memoryCache.has(key)) {
         const cached = memoryCache.get(key)
         if (Date.now() - cached.timestamp < CACHE_DURATION) {
@@ -29,7 +18,6 @@ export const getFromCache = (key) => {
         }
     }
 
-    // Проверяем localStorage
     try {
         const cached = localStorage.getItem(key)
         if (cached) {
@@ -40,7 +28,6 @@ export const getFromCache = (key) => {
                     'background: #48dbfb; color: white; padding: 2px 6px; border-radius: 3px; font-weight: bold',
                     'color: #8b9bff; font-weight: bold',
                     'color: #a0a5ab; font-style: italic')
-                // Восстанавливаем в память для быстрого доступа
                 memoryCache.set(key, parsed)
                 return parsed.data
             } else {
@@ -54,18 +41,12 @@ export const getFromCache = (key) => {
     return null
 }
 
-/**
- * Сохранить данные в кэш
- * @param {string} key - Ключ кэша
- * @param {any} data - Данные для кэширования
- */
 export const saveToCache = (key, data) => {
     const cacheObject = {
         data,
         timestamp: Date.now()
     }
 
-    // Сохраняем в память
     memoryCache.set(key, cacheObject)
     const dataSize = JSON.stringify(data).length
     const sizeKb = (dataSize / 1024).toFixed(2)
@@ -74,12 +55,10 @@ export const saveToCache = (key, data) => {
         'color: #8b9bff; font-weight: bold',
         'color: #a0a5ab; font-style: italic')
 
-    // Сохраняем в localStorage
     try {
         localStorage.setItem(key, JSON.stringify(cacheObject))
     } catch (err) {
         console.error('❌ Ошибка записи в localStorage:', err)
-        // Если localStorage переполнен, очищаем старые записи
         if (err.name === 'QuotaExceededError') {
             console.warn('⚠️ localStorage переполнен, очищаем старые данные...')
             clearOldCache()
@@ -93,9 +72,6 @@ export const saveToCache = (key, data) => {
     }
 }
 
-/**
- * Очистить весь кэш
- */
 export const clearCache = () => {
     const memSize = memoryCache.size
     memoryCache.clear()
@@ -117,9 +93,6 @@ export const clearCache = () => {
     }
 }
 
-/**
- * Очистить устаревшие записи из localStorage
- */
 export const clearOldCache = () => {
     let removedCount = 0
     try {
@@ -133,7 +106,6 @@ export const clearOldCache = () => {
                         removedCount++
                     }
                 } catch (err) {
-                    // Если не можем распарсить, удаляем
                     localStorage.removeItem(key)
                     removedCount++
                 }
@@ -149,9 +121,6 @@ export const clearOldCache = () => {
     }
 }
 
-/**
- * Получить размер кэша
- */
 export const getCacheSize = () => {
     return {
         memory: memoryCache.size,
@@ -161,11 +130,6 @@ export const getCacheSize = () => {
     }
 }
 
-/**
- * Проверить, есть ли данные в кэше
- * @param {string} key - Ключ кэша
- * @returns {boolean}
- */
 export const hasCache = (key) => {
     if (memoryCache.has(key)) {
         const cached = memoryCache.get(key)

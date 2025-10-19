@@ -41,7 +41,6 @@
     }
 }
 
-/* Table row animations */
 .table tbody tr {
     animation: fadeIn 0.5s ease-out backwards;
 }
@@ -66,7 +65,6 @@
     animation-delay: 0.25s;
 }
 
-/* Mobile адаптация */
 @media (max-width: 767px) {
     .fake-heading {
         margin-top: 20px;
@@ -108,7 +106,6 @@
         font-size: 11px;
     }
 
-    /* Делаем колонки вертикальными на мобильных */
     .col-md-4 {
         width: 100%;
         float: none;
