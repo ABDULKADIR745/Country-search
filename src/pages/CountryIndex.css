@@ -48,24 +48,47 @@
 
 @media (max-width: 767px) {
     .country-search-form {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
     .country-search-form::before {
-        left: 16px;
-        font-size: 18px;
+        left: 18px;
+        font-size: 16px;
     }
 
     #search-box {
         max-width: 100%;
         font-size: 16px;
-        height: 50px;
-        padding: 12px 24px 12px 50px;
-        border-radius: 25px;
+        height: 48px;
+        padding: 12px 20px 12px 48px;
+        border-radius: 24px;
     }
 
     .country-search-form h1 {
-        font-size: 28px;
+        font-size: 26px;
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .country-search-form {
         margin-bottom: 20px;
+    }
+
+    .country-search-form::before {
+        left: 14px;
+        font-size: 14px;
+    }
+
+    #search-box {
+        font-size: 15px;
+        height: 44px;
+        padding: 10px 16px 10px 40px;
+        border-radius: 22px;
+    }
+
+    .country-search-form h1 {
+        font-size: 22px;
+        margin-bottom: 16px;
     }
 }

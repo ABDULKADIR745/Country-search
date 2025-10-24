@@ -22,15 +22,18 @@
 
 @media (max-width: 767px) {
     .map-view-container {
-        margin-top: 20px;
+        margin-top: 18px;
         border-radius: 16px;
-        min-height: 250px;
+        min-height: 280px;
+        border-width: 1px;
     }
 }
 
 @media (max-width: 480px) {
     .map-view-container {
+        margin-top: 16px;
         border-radius: 12px;
-        min-height: 200px;
+        min-height: 240px;
+        border-width: 1px;
     }
 }

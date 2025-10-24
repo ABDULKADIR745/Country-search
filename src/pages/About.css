@@ -26,9 +26,9 @@
 @media (max-width: 768px) {
     .about-page {
         max-width: 100%;
-        padding: 25px 20px;
+        padding: 24px 18px;
         border-radius: 16px;
-        margin: 20px auto;
+        margin: 18px auto;
     }
 
     .about-page p {
@@ -40,18 +40,28 @@
     .about-page h1,
     .about-page h2,
     .about-page h3 {
-        margin-top: 30px;
-        margin-bottom: 16px;
+        margin-top: 28px;
+        margin-bottom: 14px;
     }
 }
 
 @media (max-width: 480px) {
     .about-page {
-        padding: 20px 15px;
+        padding: 18px 14px;
         border-radius: 12px;
+        margin: 16px auto;
     }
 
     .about-page p {
         font-size: 14px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+
+    .about-page h1,
+    .about-page h2,
+    .about-page h3 {
+        margin-top: 24px;
+        margin-bottom: 12px;
     }
 }

@@ -43,14 +43,14 @@
 
 @media (max-width: 768px) {
     .app>.container {
-        padding-top: 20px;
-        padding-bottom: 40px;
+        padding-top: 15px;
+        padding-bottom: 30px;
     }
 }
 
 @media (max-width: 480px) {
     .app>.container {
-        padding-top: 15px;
-        padding-bottom: 30px;
+        padding-top: 10px;
+        padding-bottom: 25px;
     }
 }

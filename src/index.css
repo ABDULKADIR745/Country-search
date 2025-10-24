@@ -189,6 +189,7 @@ a:hover::after {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(102, 126, 234, 0.2);
+
 }
 
 .row::after {
@@ -854,6 +855,7 @@ em {
     .container {
         padding-right: 5px;
         padding-left: 5px;
+
     }
 
     .row {
