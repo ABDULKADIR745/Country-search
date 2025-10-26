@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState, memo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './CountrySummary.css'
 
-const CountrySummary = ({ country }) => {
+const CountrySummary = memo(({ country }) => {
     const [isHovered, setIsHovered] = useState(false)
     const navigate = useNavigate()
 
@@ -76,7 +76,9 @@ const CountrySummary = ({ country }) => {
             </table>
         </div>
     )
-}
+})
+
+CountrySummary.displayName = 'CountrySummary'
 
 export default CountrySummary
 

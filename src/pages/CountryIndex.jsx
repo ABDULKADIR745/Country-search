@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
 import { useParams } from 'react-router-dom'
 import { useCountries } from '../hooks/useCountries'
 import { filterCountries } from '../utils/searchUtils'
@@ -9,7 +9,13 @@ const CountryIndex = () => {
     const { searchTerm: urlSearchTerm } = useParams()
     const [searchTerm, setSearchTerm] = useState(urlSearchTerm || '')
     const { countries, loading } = useCountries()
-    const [filteredCountries, setFilteredCountries] = useState([])
+    const filteredCountries = useMemo(() => {
+        return filterCountries(countries, searchTerm)
+    }, [countries, searchTerm])
+
+    const handleSearchChange = useCallback((e) => {
+        setSearchTerm(e.target.value)
+    }, [])
 
     useEffect(() => {
         if (urlSearchTerm) {
@@ -20,10 +26,6 @@ const CountryIndex = () => {
     useEffect(() => {
         document.title = 'Страны мира'
     }, [])
-
-    useEffect(() => {
-        setFilteredCountries(filterCountries(countries, searchTerm))
-    }, [countries, searchTerm])
 
     return (
         <div>
@@ -37,7 +39,7 @@ const CountryIndex = () => {
                             id="search-box"
                             placeholder="Введите название страны"
                             value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
+                            onChange={handleSearchChange}
                         />
                     </form>
                 </div>
@@ -50,10 +52,17 @@ const CountryIndex = () => {
                     </div>
                 </div>
             )}
-
-            <div className="row">
-                {filteredCountries.map(country => (
-                    <div key={country.cca3} className="col-md-3 col-sm-4">
+            <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '10px',
+                justifyContent: 'center'
+            }}>
+                {filteredCountries.map((country) => (
+                    <div key={country.cca3} style={{
+                        flex: '0 0 calc(25% - 7.5px)',
+                        minWidth: '280px'
+                    }}>
                         <CountrySummary country={country} />
                     </div>
                 ))}

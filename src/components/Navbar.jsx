@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
+import { memo } from 'react'
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = memo(() => {
     return (
         <nav className="navbar navbar-default navbar-static-top" role="navigation">
             <div className="container">
@@ -19,7 +20,9 @@ const Navbar = () => {
             </div>
         </nav>
     )
-}
+})
+
+Navbar.displayName = 'Navbar'
 
 export default Navbar
 

@@ -26,17 +26,14 @@ export const filterCountries = (countries, searchTerm) => {
     }
 
     return countries.filter(country => {
-        // Match common name
         if (matches(country.name.common)) {
             return true
         }
 
-        // Match native name
         if (country.name.native && country.name.native.common && matches(country.name.native.common)) {
             return true
         }
 
-        // Match country codes
         if (search.length <= 2 && matches(country.cca2)) {
             return true
         }
@@ -45,12 +42,10 @@ export const filterCountries = (countries, searchTerm) => {
             return true
         }
 
-        // Match currency codes
         if (search.length <= 3 && country.currency && listMatches(country.currency)) {
             return true
         }
 
-        // Match translations
         if (country.translations && objectValuesMatch(country.translations)) {
             return true
         }
